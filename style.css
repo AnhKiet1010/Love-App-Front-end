@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-position: center top;
+    background-image: url('image/background.png');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Noto Sans JP', sans-serif;
@@ -19,6 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100000;
 }
 
 .loader > img {
@@ -31,34 +33,226 @@ body {
     margin-left: 5px;
 }
 
+/* For index */
 .container > .sologan {
     text-align: center;
     width: 100%;
     font-size: 60px;
     font-weight: 700;
     font-family: 'M PLUS 1p', sans-serif;
-    color: #e74c3c;
+    color: #fff;
     font-weight: lighter;
 }
-.inputheader {
-    width: 200px;
+.box {
+	padding: 40px;
+	background-color: rgba(0, 0, 0, 0.3);
+	text-align: center;
+	border-radius: 24px;
 }
-.inputForm {
-    background-color: transparent;
-    width: 200px;
-    font-size: 25px;
-    border: none;
-    border-bottom: solid 1px #fff;
-    border-radius: 0px;
+.box h1{
+	color: white;
+	font-weight: 500;
 }
-.inputForm:focus {
-    background-color: transparent;
-    border-bottom: transparent;
-    outline: none;
-    color: #fff;
+.box input[type="text"], .box input[type="password"]{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #ec5569;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
 }
-.text-under {
-    color: #bdc3c7;
-    font-size: 12px;
+.box input[type="text"]:focus ,.box input[type="password"]:focus{
+	width: 280px;
+	border-color: #000;
+}
+.box input[type="submit"] {
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #000;
+	padding: 14px 40px;
+	width: 150px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.box input[type="submit"]:hover {
+	background: #000;
 }
 
+/* For Gender */
+
+.radio-btn {
+	background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    padding-bottom: 30px;
+}
+@keyframes click-wave {
+    0% {
+        height: 40px;
+        width: 40px;
+        opacity: 0.35;
+        position: relative;
+    }
+    100% {
+        height: 200px;
+        width: 200px;
+        margin-left: -80px;
+        margin-top: -80px;
+        opacity: 0;
+    }
+}
+
+.option-input {
+    appearance: none;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    transition: all 0.15s ease-out 0s;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+}
+.option-input:hover {
+background: rgba(0, 0, 0, 0.3);
+}
+.option-input:checked {
+background: rgba(0, 0, 0, 0.3);
+}
+.option-input:checked::before {
+height: 40px;
+width: 40px;
+position: absolute;
+content: '✔';
+display: inline-block;
+font-size: 26.66667px;
+text-align: center;
+line-height: 40px;
+}
+.option-input:checked::after {
+animation: click-wave 0.65s;
+background: rgba(0, 0, 0, 0.3);
+content: '';
+display: block;
+position: relative;
+}
+.option-input.radio {
+border-radius: 50%;
+}
+.option-input.radio::after {
+border-radius: 50%;
+}
+body label {
+    display: block;
+    line-height: 40px;
+    padding-left: 30px;
+}
+body label:nth-child(1) {
+    padding-top: 30px;
+}
+.radio-btn input[type="submit"] {
+	border: 0;
+	background: none;
+    display: block;
+    margin: 10px auto;
+	border: 2px solid #000;
+	padding: 14px 40px;
+	outline: none;
+    color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+    cursor: pointer;
+}
+.radio-btn input[type="submit"]:hover {
+    background: #000;
+}
+/* For List Hobby */
+.list-hobby {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    padding-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+ul.ks-cboxtags {
+    list-style: none;
+    padding: 20px;
+}
+ul.ks-cboxtags li {
+    display: inline;
+}
+ul.ks-cboxtags li label {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(139, 139, 139, 0.3);
+    color: #adadad;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 0.2s;
+}
+
+ul.ks-cboxtags li label {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+ul.ks-cboxtags li label::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-weight: 900;
+    font-size: 12px;
+    padding: 2px 6px 2px 2px;
+    content: "+";
+    transition: transform 0.3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
+    content: "✔";
+    transform: rotate(-360deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+    border: 2px solid #1bdbf8;
+    background-color: #12bbd4;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+display: absolute;
+}
+ul.ks-cboxtags li input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+ul.ks-cboxtags li input[type="checkbox"]:focus + label {
+    border: 2px solid #e9a1ff;
+}
