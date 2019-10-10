@@ -12,8 +12,9 @@
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="style.css">
-    <title>Love App</title>
+    <title>Love App || Result</title>
 </head>
 <body>
     
@@ -24,7 +25,7 @@
     <!-- Loader End -->
 
     <!-- For Page -->
-    <header class='mainHeader'>
+    <header class='mainHeader d-flex'>
         <div class="d-flex m-3">
             <a class="nav-link" href="index.html">
                 <img src='image/love.svg' alt="logo" width="50px"/>
@@ -33,24 +34,28 @@
         </div>
     </header>
     <div class="container">
-        <h2 class="sologan">愛を叫ぼう</h2>
-        <div class="row mt-2">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4">
-                <form class="box" action="gender.html" method="get">
-                    <h1>私の下の名前は</h1>
-                    <input type="text" name="username" placeholder="名前を入力してください！">
-                    <input type="submit" name="" value="次へ">
-                </form>
+        <button class="btn">
+            <a href="index.html">
+                <img src="image/go-back.svg" alt="戻る" width="45px">
+            </a>
+        </button>
+        <h2 class="text-center">検索結果 :  件</h2>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="image-area">
+                <div class="img-wrapper">
+                    <img src="image/dung.jpg" alt="">
+                    <h2>Dung Nguyen</h2>
+                    <ul>
+                        <li><a href="https://github.com/atuljustano"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://www.instagram.com/atulkprajapati2000/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/atuljustano"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCf-KfxuY8PZBSD_8RW2nYsw"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-lg-4"></div>
         </div>
     </div>
     <!-- Page End -->
-
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
     <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
